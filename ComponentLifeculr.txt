@@ -1,0 +1,40 @@
+// component lifecylce method;
+
+What have leant till now?
+==> in terms of hooks : useState and UseEffect 
+==> states and props
+==> react router dom and routing and linking
+==>axios and api calling in UseEffect.
+==> setting up states and mapping an Array in react.
+==> rendering and making of components.
+
+// In React , we have  two types of components :functional components and Class components.
+// component lifecylce method : Class component
+
+// component lifecylce method  : functional components
+// component lifecylce method : mounting , updating and unmounting;
+
+// mounting :phase 1: When your component load for the first browser paint ,
+              whenever you create a component, you write jsx or html ,this html needs to be insereted or to loaded in browser real DOM.
+   Inner phase of mounting :(componentwillmount) 
+   : state or props or anything related to useState :
+   : Using UseEffect without dependcy :empty dependcy array.
+
+// updating :phase2 :When all the components and its member childs are mounted or already loaded on the bower realDOM , than if you want to something it comes in updating phase.
+           Ex : dom manipulating using UseEffect, api calling 
+    Inner phase of updating :(componentwillupdate) :UseEffect hook :dependcy Array :ex:vounter state we passed in the dependcy array;
+    : when you provide state in dependcy array : based on this UseEffect will update the component.
+
+     
+
+// unmounting : when component is removed from browser realDom either way due to stoping of server or due to conditonal rendering.
+   Inner phase of unmounting :(componentwillunmount)
+   :UseEffect returns function which is known as a cleanup function, which in return can help you to clean any type of aftereffect which you have given to components.
+   and the moment this is done , we are performing componentwillunmount inner phase action. 
+   // useEffect(() => {
+//   first
+
+//   return () => {
+//     second or cleanup function
+//   }
+// }, [third])
