@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import "./cards.css";
+import { Link } from "react-router-dom";
 
 export default function Cards(props) {
   console.log(props);
@@ -11,7 +12,7 @@ export default function Cards(props) {
         <div class="description">{props.description}</div>
         <div class="buttons">
           <button>Add to Cart</button>
-          <button>View Details</button>
+          <Link to={`/cards/description/${props.id}`}>View Details</Link>
         </div>
       </div>
     </div>

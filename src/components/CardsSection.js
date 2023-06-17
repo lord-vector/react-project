@@ -19,6 +19,7 @@ export default function CardsSection() {
       {products.map((ele) => {
         return (
           <Cards
+            id={ele.id}
             title={ele.title}
             image={ele.images[0]}
             description={ele.description}
